@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+  width: 500px;
+  margin: auto !important;
+}
+.image {
+  width: 20px;
+  height: 20px;
+}
+.itemTable {
+  margin-top: 50% !important;
+}
+li {
+  list-style: none;
+}
+.slug {
+  font-weight: bold;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 9, 9);
+  color: white;
+  font-weight: bold;
+  height: 7rem;
+}
+.text-center {
+  width: 20rem;
+  margin: auto;
+  margin-top: 40px;
+  background: black;
+  color: white;
+}
+.details {
+  position: relative;
+}
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #2b2eff;
+  color: #2b2eff;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #2b2eff;
+}
+.loadingContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
