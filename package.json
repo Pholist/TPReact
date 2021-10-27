@@ -2,6 +2,7 @@
   "name": "redux-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://api.pandascore.co",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
