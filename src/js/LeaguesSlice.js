@@ -12,7 +12,7 @@ export const getLeagueById = createAsyncThunk(
   // callback function
   async (id) => {
     console.log("this is id", id);
-    const res = await fetch(`https://api.pandascore.co/leagues/${id}`, {
+    const res = await fetch(url + "/" + id, {
       headers: {
         Authorization: token,
       },
