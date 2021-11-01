@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useLocation, useState } from "../../lib/imported";
 import Dropdown from "react-bootstrap/Dropdown";
-import { selectByGame } from "../../js/LeaguesSlice";
-import { selectByGameTeams } from "../../js/TeamsSlice";
+import { getLeagues, selectByGame } from "../../js/LeaguesSlice";
+import { getTeams, selectByGameTeams } from "../../js/TeamsSlice";
 const SelectorList = ({ games }) => {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -21,6 +21,19 @@ const SelectorList = ({ games }) => {
       dispatch(selectByGame({ name: name }));
     }
   };
+    const handleAllGms = () => {
+    const selected = "All games";
+    setTitle(selected);
+    console.log("URL ", location);
+
+    if (location.pathname === "/teams") {
+      dispatch(getTeams(0, 50));
+    }
+    if (location.pathname === "/leagues") {
+      console.log("insideee");
+      dispatch(getLeagues(0, 50));
+    }
+  };
   return (
     <div>
       <Dropdown>
@@ -29,6 +42,9 @@ const SelectorList = ({ games }) => {
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
+          <Dropdown.Item variant="secondary" onClick={() => handleAllGms()}>
+            All games
+          </Dropdown.Item>
           {games.map((game) => (
             <Dropdown.Item
               href={`#/${game.id}`}
