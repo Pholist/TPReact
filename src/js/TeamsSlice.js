@@ -9,7 +9,7 @@ export const getTeamById = createAsyncThunk(
   async (id) => {
     console.log("this is id", id);
     console.log("GET BY ID");
-    const res = await fetch(`https://api.pandascore.co/teams/${id}`, {
+    const res = await fetch(url + "/" + id, {
       headers: {
         Authorization: token,
       },
